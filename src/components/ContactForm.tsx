@@ -19,9 +19,9 @@ export function ContactForm() {
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form)) as Record<string, string>;
 
-    if (!data.name?.trim() || !data.phone?.trim() || !data.suburb?.trim()) {
+    if (!data.name?.trim() || !data.phone?.trim() || !data.suburb?.trim()||!data.help?.trim()) {
       setStatus("error");
-      setMessage("Please fill in your name, phone number and suburb so I can get back to you.");
+      setMessage("Please fill in all fields so I can help you.");
       return;
     }
 

@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Invalid request" }, { status: 400 });
   }
 
-  if (!body.name?.trim() || !body.phone?.trim() || !body.suburb?.trim()) {
+  if (!body.name?.trim() || !body.phone?.trim() || !body.suburb?.trim()||!body.help?.trim()) {
     return NextResponse.json({ ok: false, error: "Missing required fields" }, { status: 422 });
   }
 

@@ -86,6 +86,6 @@ export const faqs = [
 
 export const timeOptions = [
   { value: "weekday", label: "Weekday afternoon (from 4:30 pm)" },
-  { value: "saturday", label: "Saturday morning" },
+  { value: "weekend", label: "Saturday or Sunday" },
   { value: "other", label: "Other / Please contact me" },
 ];
