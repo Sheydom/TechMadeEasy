@@ -41,8 +41,8 @@ export function Footer() {
         </div>
         <div className="mt-9 flex flex-wrap gap-x-5 border-t border-line pt-5 text-[.95rem] text-[#4A5B6B]">
           <span>© {new Date().getFullYear()} Tech Made Easy with Dominic.</span>
-          <a href="#contact">Privacy Policy</a>
-          <a href="#contact">Terms</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
         </div>
       </div>
     </footer>

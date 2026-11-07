@@ -21,7 +21,7 @@ export function ContactForm() {
 
     if (!data.name?.trim() || !data.phone?.trim() || !data.suburb?.trim()||!data.help?.trim()) {
       setStatus("error");
-      setMessage("Please fill in all fields so I can help you.");
+      setMessage("Please fill in required fields so I can help you.");
       return;
     }
 

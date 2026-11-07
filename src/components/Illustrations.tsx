@@ -86,27 +86,60 @@ export function FamilyArt() {
 
 export function MapArt() {
   return (
-    <svg viewBox="0 0 600 440" className={cls} xmlns="http://www.w3.org/2000/svg" fontFamily="var(--font-atkinson), Arial, sans-serif" fontSize="19" fontWeight="700" fill="#19324A">
+    <svg
+      viewBox="0 0 600 440"
+      className={cls}
+      xmlns="http://www.w3.org/2000/svg"
+      fontFamily="var(--font-atkinson), Arial, sans-serif"
+      fontSize="19"
+      fontWeight="700"
+      fill="#19324A"
+    >
       <rect width="600" height="440" fill="#F8FBFA" />
-      <path d="M0 150c120-30 200 40 330 0s190-30 270 10" stroke="#D5E7E3" strokeWidth="26" fill="none" />
-      <path d="M300 0v440M0 230h600M120 0l360 440" stroke="#E4DCCD" strokeWidth="10" fill="none" />
-      <rect x="70" y="260" width="110" height="80" rx="16" fill="#CFE5DB" />
-      <rect x="430" y="60" width="110" height="80" rx="16" fill="#CFE5DB" />
+
+      {/* Maribyrnong River (west side) */}
+      <path
+        d="M40 0C70 90 50 160 90 230S70 330 120 380S200 420 230 440"
+        stroke="#CFE6F2"
+        strokeWidth="22"
+        fill="none"
+        strokeLinecap="round"
+      />
+
+      {/* Simplified main roads (decorative) */}
+      <path d="M353 390L314 230L242 120L150 60" stroke="#E4DCCD" strokeWidth="10" fill="none" strokeLinecap="round" />
+      <path d="M163 320L314 230L496 60" stroke="#E4DCCD" strokeWidth="10" fill="none" strokeLinecap="round" />
+
+      {/* Green spaces */}
+      <rect x="400" y="250" width="100" height="70" rx="16" fill="#CFE5DB" />
+      <rect x="180" y="150" width="70" height="50" rx="14" fill="#CFE5DB" />
+
+      {/* Suburb markers, placed by approximate real-world coordinates */}
       <g fill="#2A7168">
-        <circle cx="300" cy="230" r="14" />
-        <circle cx="300" cy="105" r="10" />
-        <circle cx="170" cy="150" r="10" />
-        <circle cx="435" cy="170" r="10" />
-        <circle cx="170" cy="335" r="10" />
-        <circle cx="440" cy="330" r="10" />
+        <circle cx="314" cy="230" r="8" />   {/* Essendon */}
+        <circle cx="242" cy="120" r="10" />  {/* Essendon North */}
+        <circle cx="353" cy="390" r="10" />  {/* Moonee Ponds */}
+        <circle cx="100" cy="70" r="10" />   {/* Niddrie */}
+        <circle cx="163" cy="320" r="10" />  {/* Aberfeldie */}
+        <circle cx="496" cy="60" r="10" />   {/* Strathmore */}
       </g>
-      <circle cx="300" cy="230" r="26" fill="none" stroke="#2A7168" strokeWidth="3" />
-      <text x="330" y="226">Essendon</text>
-      <text x="318" y="100">Essendon North</text>
-      <text x="40" y="146">Moonee Ponds</text>
-      <text x="452" y="176">Niddrie</text>
-      <text x="64" y="372">Aberfeldie</text>
-      <text x="456" y="336">Strathmore</text>
+      <circle cx="314" cy="230" r="22" fill="none" stroke="#2A7168" strokeWidth="3" />
+
+      {/* Labels (outlined so they stay readable over roads) */}
+      <g stroke="#F8FBFA" strokeWidth="5" paintOrder="stroke">
+        <text x="346" y="236">Essendon</text>
+        <text x="258" y="126">Essendon North</text>
+        <text x="369" y="396">Moonee Ponds</text>
+        <text x="116" y="76">Niddrie</text>
+        <text x="179" y="326">Aberfeldie</text>
+        <text x="484" y="66" textAnchor="end">Strathmore</text>
+      </g>
+
+      {/* North arrow */}
+      <g transform="translate(556 40)" stroke="none">
+        <path d="M0-20L10 6L0 0L-10 6Z" fill="#19324A" />
+        <text y="28" textAnchor="middle" fontSize="16">N</text>
+      </g>
     </svg>
   );
 }
